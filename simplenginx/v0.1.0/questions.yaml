@@ -1,0 +1,12 @@
+categories:
+  - davidnuzik
+questions:
+- group: "App Settings"
+  variable: app.session.secret
+  default: ""
+  description: "secret will be auto-generated if not specified"
+  min_length: 64
+  max_length: 64
+  valid_chars: "a-zA-Z0-9"
+  type: password
+  label: Session Secret
