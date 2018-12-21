@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "simpleNginx.fullname" . }}
+  name: {{ template "simpleNginx.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "simpleNginx.name" . }}
-    helm.sh/chart: {{ include "simpleNginx.chart" . }}
+    app.kubernetes.io/name: {{ template "simpleNginx.name" . }}
+    helm.sh/chart: {{ template "simpleNginx.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app.kubernetes.io/name: {{ include "simpleNginx.name" . }}
+    app.kubernetes.io/name: {{ template "simpleNginx.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
