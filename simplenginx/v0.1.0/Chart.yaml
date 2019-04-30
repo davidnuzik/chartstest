@@ -2,7 +2,6 @@ apiVersion: v1
 appVersion: "1.0"
 description: A Helm chart for Kubernetes
 home: https://start.duckduckgo.com/
-icon: https://start.duckduckgo.com/assets/common/dax-logo.svg
 maintainers:
 - email: david.nuzik@gmail.com
   name: David Nuzik
